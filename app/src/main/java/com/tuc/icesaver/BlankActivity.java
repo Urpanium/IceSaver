@@ -7,6 +7,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.Spinner;
@@ -17,8 +18,9 @@ import android.widget.Toast;
 public class BlankActivity extends AppCompatActivity {
 
     Switch carAvailibilitySwitch;
-    Switch smokingSwitch;
+    //Switch smokingSwitch;
     Switch beefSwitch;
+    Switch milkSwitch;
     Spinner beefFrequencySpinner;
     EditText ageEditText;
     TextView ageErrorText;
@@ -29,7 +31,22 @@ public class BlankActivity extends AppCompatActivity {
         setContentView(R.layout.blank_activity);
         findWidgets();
         ageErrorText.setText("");
+        beefSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton button, boolean isChecked) {
+                beefFrequencySpinner.setEnabled(isChecked);
+                beefFrequencySpinner.setClickable(isChecked);
+            }
+        });
+        if (!Settings.isFirstRun) {
+            carAvailibilitySwitch.setChecked(Settings.car);
+            beefSwitch.setChecked(Settings.beef);
+            beefFrequencySpinner.setSelection(Settings.beefFrequency);
+            milkSwitch.setChecked(Settings.milk);
+            ageEditText.setText(Settings.age + "", TextView.BufferType.EDITABLE);
+        }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -42,33 +59,34 @@ public class BlankActivity extends AppCompatActivity {
         onBlankDone();
         return super.onOptionsItemSelected(item);
     }
-    void findWidgets() {
-        carAvailibilitySwitch = (Switch) findViewById(R.id.swCar);
-        beefSwitch = (Switch) findViewById(R.id.swBeef);
-        beefFrequencySpinner = (Spinner) findViewById(R.id.spBeef);
-        ageEditText = (EditText) findViewById(R.id.etAge);
-        ageErrorText = (TextView) findViewById(R.id.tvWrongAge);
 
+    void findWidgets() {
+        carAvailibilitySwitch = findViewById(R.id.swCar);
+        beefSwitch = findViewById(R.id.swBeef);
+        beefFrequencySpinner = findViewById(R.id.spBeef);
+        milkSwitch = findViewById(R.id.swMilk);
+        ageEditText = findViewById(R.id.etAge);
+        ageErrorText = findViewById(R.id.tvWrongAge);
     }
+
     public void onBlankDone() {
         if (!ageEditText.getText().toString().equals("")) {
             int age = Integer.parseInt(ageEditText.getText().toString());
-            if (age <= 150&&age > 0) {
-                //Settings.smoking = smokingSwitch.isChecked();
+            if (age <= 120 && age > 0) {
                 Settings.beef = beefSwitch.isChecked();
                 if (Settings.beef)
                     Settings.beefFrequency = beefFrequencySpinner.getSelectedItemPosition();
                 Settings.car = carAvailibilitySwitch.isChecked();
-
+                Settings.age = age;
+                Settings.milk = milkSwitch.isChecked();
                 Settings.save();
-                //Toast.makeText(this, "new data " + FileUtil.readFile("data"),Toast.LENGTH_LONG).show();
-                Intent intent=new Intent(this,MainActivity.class);
+                Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 finish();
             } else {
                 ageErrorText.setText(getResources().getString(R.string.blank_age_error));
             }
-        }else {
+        } else {
             ageErrorText.setText(getResources().getString(R.string.blank_age_empty));
         }
     }

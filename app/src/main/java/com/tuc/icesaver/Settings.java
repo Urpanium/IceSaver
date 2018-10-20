@@ -2,33 +2,34 @@ package com.tuc.icesaver;
 
 import android.content.Context;
 
-public class Settings {
+class Settings {
 
-    public static boolean isFirstRun = false;
-    public static Context ctx;
+    static boolean isFirstRun = false;
+    static Context ctx;
 
-    public static int age = 0;
-    public static boolean car = false;
-    public static boolean beef = false;
-    public static int beefFrequency = -1;
-    public static boolean milk = false;
-    public static void save() {
-        FileUtil.writeKey("age",""+age,ctx);
-        FileUtil.writeKey("car",""+car,ctx);
-        FileUtil.writeKey("beef",""+beef,ctx);
-        if(beef)
-            FileUtil.writeKey("beefFrequency",""+beefFrequency,ctx);
-        FileUtil.writeKey("milk",""+milk,ctx);
+    static int age = 0;
+    static boolean car = false;
+    static boolean beef = false;
+    static int beefFrequency = -1;
+    static boolean milk = false;
+
+    static void save() {
+        FileUtil.writeKey("age", "" + age, ctx);
+        FileUtil.writeKey("car", "" + car, ctx);
+        FileUtil.writeKey("beef", "" + beef, ctx);
+        if (beef)
+            FileUtil.writeKey("beefFrequency", "" + beefFrequency, ctx);
+        FileUtil.writeKey("milk", "" + milk, ctx);
 
     }
 
-    public static void load() {
+    static void load() {
         age = Integer.parseInt(FileUtil.readKey("age"));
         car = Boolean.parseBoolean(FileUtil.readKey("car"));
         beef = Boolean.parseBoolean(FileUtil.readKey("beef"));
-        if(beef)
+        if (beef)
             beefFrequency = Integer.parseInt(FileUtil.readKey("beefFrequency"));
-        milk =  Boolean.parseBoolean(FileUtil.readKey("milk"));
+        milk = Boolean.parseBoolean(FileUtil.readKey("milk"));
     }
 
 }

@@ -11,22 +11,23 @@ import java.io.File;
 public class SplashActivity extends AppCompatActivity {
 
     Context ctx;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ctx=getApplicationContext();
+        ctx = getApplicationContext();
         FileUtil.path = new File(ctx.getFilesDir().toString());
-        Settings.ctx=ctx;
-        Settings.isFirstRun=FileUtil.isFirstRun();
+        Settings.ctx = ctx;
+        Settings.isFirstRun = FileUtil.isFirstRun();
 
 
-        if(!Settings.isFirstRun){
+        if (!Settings.isFirstRun) {
 
             Intent intent = new Intent(this, MainActivity.class);
             Settings.load();
             startActivity(intent);
             finish();
-        }else{
+        } else {
 
             Intent intent = new Intent(this, StartActivity.class);
             startActivity(intent);

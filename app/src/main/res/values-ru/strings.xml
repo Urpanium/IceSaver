@@ -13,12 +13,14 @@
         <item>Раз в неделю</item>
         <item>Никогда</item>
     </string-array>
-    <string name="blank_milk">Вы пьёте молоко?</string>
+    <string name="blank_milk">Вы употребляете молочные продукты?</string>
     <string name="blank_age">Ваш возраст:</string>
-    <string name="blank_age_hint">Напишите ваш возраст здесь...</string>
+    <string name="blank_age_hint">Напишите ваш возраст здесь…</string>
     <string name="blank_please">Пожалуйста, заполните эту анкету:</string>
     <string name="blank_done">Готово</string>
     <string name="blank_age_error">Недопустимый возраст</string>
     <string name="blank_beef_frequency">Частота употребления говядины</string>
     <string name="blank_age_empty">Пожалуйста, введите свой возраст</string>
+    <string name="main_settings">Настройки</string>
+    <string name="main_refill_blank">Изменить анкету</string>
 </resources>
