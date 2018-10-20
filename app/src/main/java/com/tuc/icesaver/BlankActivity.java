@@ -38,6 +38,8 @@ public class BlankActivity extends AppCompatActivity {
                 beefFrequencySpinner.setClickable(isChecked);
             }
         });
+        beefFrequencySpinner.setEnabled(beefSwitch.isChecked());
+        beefFrequencySpinner.setClickable(beefSwitch.isChecked());
         if (!Settings.isFirstRun) {
             carAvailibilitySwitch.setChecked(Settings.car);
             beefSwitch.setChecked(Settings.beef);
