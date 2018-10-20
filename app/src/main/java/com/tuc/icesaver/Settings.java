@@ -6,7 +6,8 @@ class Settings {
 
     static boolean isFirstRun = false;
     static Context ctx;
-
+    static long lastTime = 0;
+    static double lastIceMeltAllValue = 0;
     static int age = 0;
     static boolean car = false;
     static boolean beef = false;
@@ -30,6 +31,7 @@ class Settings {
         if (beef)
             beefFrequency = Integer.parseInt(FileUtil.readKey("beefFrequency"));
         milk = Boolean.parseBoolean(FileUtil.readKey("milk"));
+
     }
 
 }
