@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/blank_please"
+                            android:textColor="@color/primaryText"
+                            android:textSize="18sp" />
+
+                        <Switch
+                            android:id="@+id/swCar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginLeft="0dp"
+                            android:text="@string/blank_car"
+                            android:textSize="18sp" />
+
+                        <Switch
+                            android:id="@+id/swBeef"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="@string/blank_beef"
+                            android:textSize="18sp" />
+
+                        <Spinner
+                            android:id="@+id/spBeef"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:entries="@array/blank_beef_frequency"/>
+
+                        <Switch
+                            android:id="@+id/swMilk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="@string/blank_milk"
+                            android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/blank_age"
+                        android:textColor="@color/primaryText"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/etAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:digits="0123456789"
+                        android:hint="@string/blank_age_hint"
+                        android:inputType="number" />
+
+                    <TextView
+                        android:id="@+id/tvWrongAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Произошёл троллинг"
+                        android:textColor="@color/red" />
+
+                </LinearLayout>
+        </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

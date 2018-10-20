@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Ice App</string>
+    <string name="start_start">Начать</string>
+    <string name="blank_car">Наличие машины</string>
+    <string name="blank_beef">Вы едите говядину?</string>
+    <string name="blank_smoking_yesno">Вы курите?</string>
+    <string name="blank_smoking_frequency">Как часто вы курите?</string>
+    <string name="logo">Crutch</string>
+    <string name="blank_title">Бланк</string>
+    <string-array name="blank_beef_frequency">
+        <item>Каждый день</item>
+        <item>Трижды в неделю</item>
+        <item>Раз в неделю</item>
+        <item>Никогда</item>
+    </string-array>
+    <string name="blank_milk">Вы пьёте молоко?</string>
+    <string name="blank_age">Ваш возраст:</string>
+    <string name="blank_age_hint">Напишите ваш возраст здесь...</string>
+    <string name="blank_please">Пожалуйста, заполните эту анкету:</string>
+    <string name="blank_done">Готово</string>
+    <string name="blank_age_error">Недопустимый возраст</string>
+    <string name="blank_beef_frequency">Частота употребления говядины</string>
+</resources>

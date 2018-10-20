@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Ice App</string>
+    <string name="logo">Crutch</string>
+    <string name="start_start">Start</string>
+    <string name="blank_car">Car availability</string>
+    <string name="blank_beef">Are you eating beef?</string>
+    <string name="blank_smoking_yesno">Are you smoking?</string>
+    <string name="blank_smoking_frequency">Smoking frequency</string>
+    <string name="blank_title">Blank</string>
+    <string-array name="blank_beef_frequency">
+        <item>Every day</item>
+        <item>3 times a week</item>
+        <item>Once per week</item>
+        <item>Never</item>
+    </string-array>
+    <string name="blank_milk">Are you drinking milk?</string>
+    <string name="blank_age">Your age:</string>
+    <string name="blank_age_hint">Type your age here...</string>
+    <string name="blank_please">Please fill out this form:</string>
+    <string name="blank_done">Done</string>
+    <string name="blank_age_error">Invalid age</string>
+    <string name="blank_beef_frequency">Frequency of eating beef</string>
+
+</resources>
