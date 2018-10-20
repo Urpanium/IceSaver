@@ -25,11 +25,9 @@
     <string name="main_refill_blank">Change blank</string>
 
     <string name="main_title">Help to protect our world</string>
-    <string name="main_table_environmental_impact">Environmental_impact</string>
-    <string name="main_table_second_title">Your effects</string>
+    <string name="main_table_environmental_impact">Environmental impact</string>
+    <string name="main_table_title_on_black">Your effects</string>
     <string name="main_melted_ice_text">melted ice</string>
-    <string name="main_melted_ice_for_life_default">200 tonn/life</string>
-    <string name="main_melted_ice_per_day">1 tonn/day</string>
     <string name="main_text_stat">your statistics</string>
 
     <string name="add_ice_title">mellting ice</string>
