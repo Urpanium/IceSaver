@@ -1,5 +1,6 @@
 package com.tuc.icesaver;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
@@ -27,6 +28,7 @@ public class BlankActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.blank_activity);
         findWidgets();
+        ageErrorText.setText("");
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,26 +50,26 @@ public class BlankActivity extends AppCompatActivity {
         ageErrorText = (TextView) findViewById(R.id.tvWrongAge);
 
     }
-    void wrongAge(){
-
-    }
     public void onBlankDone() {
-        int age = Integer.parseInt(ageEditText.getText().toString());
         if (!ageEditText.getText().toString().equals("")) {
-            if (age <= 150) {
+            int age = Integer.parseInt(ageEditText.getText().toString());
+            if (age <= 150&&age > 0) {
                 //Settings.smoking = smokingSwitch.isChecked();
                 Settings.beef = beefSwitch.isChecked();
                 if (Settings.beef)
-                    Settings.beefFrequency = Integer.parseInt(beefFrequencySpinner.getSelectedItem().toString());
+                    Settings.beefFrequency = beefFrequencySpinner.getSelectedItemPosition();
                 Settings.car = carAvailibilitySwitch.isChecked();
 
                 Settings.save();
                 //Toast.makeText(this, "new data " + FileUtil.readFile("data"),Toast.LENGTH_LONG).show();
-                //Intent intent=new Intent();
+                Intent intent=new Intent(this,MainActivity.class);
+                startActivity(intent);
                 finish();
             } else {
                 ageErrorText.setText(getResources().getString(R.string.blank_age_error));
             }
+        }else {
+            ageErrorText.setText(getResources().getString(R.string.blank_age_empty));
         }
     }
 }

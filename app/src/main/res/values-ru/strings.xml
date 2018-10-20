@@ -20,4 +20,5 @@
     <string name="blank_done">Готово</string>
     <string name="blank_age_error">Недопустимый возраст</string>
     <string name="blank_beef_frequency">Частота употребления говядины</string>
+    <string name="blank_age_empty">Пожалуйста, введите свой возраст</string>
 </resources>

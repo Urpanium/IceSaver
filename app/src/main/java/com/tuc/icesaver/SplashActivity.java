@@ -23,13 +23,14 @@ public class SplashActivity extends AppCompatActivity {
         if(!Settings.isFirstRun){
 
             Intent intent = new Intent(this, MainActivity.class);
+            Settings.load();
             startActivity(intent);
             finish();
         }else{
 
             Intent intent = new Intent(this, StartActivity.class);
             startActivity(intent);
-
+            finish();
         }
 
     }

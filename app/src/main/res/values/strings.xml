@@ -20,5 +20,6 @@
     <string name="blank_done">Done</string>
     <string name="blank_age_error">Invalid age</string>
     <string name="blank_beef_frequency">Frequency of eating beef</string>
+    <string name="blank_age_empty">Please type your age</string>
 
 </resources>

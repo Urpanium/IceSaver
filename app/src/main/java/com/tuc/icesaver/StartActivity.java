@@ -22,6 +22,7 @@ public class StartActivity extends AppCompatActivity {
     public void startBlank(View v) {
         Intent intent = new Intent(this, BlankActivity.class);
         startActivity(intent);
+        finish();
     }
 
 
