@@ -33,11 +33,20 @@
             android:label="@string/blank_title">
         </activity>
 
-        <activity android:name=".MainActivity">
-
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AddInformation">
         </activity>
 
+        <activity
+            android:name=".AddIce"
+            android:theme="@style/AddInformation">
+        </activity>
 
+        <activity
+            android:name=".AddPenguin"
+            android:theme="@style/AddInformation">
+        </activity>
 
 
     </application>

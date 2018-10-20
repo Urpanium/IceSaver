@@ -23,4 +23,16 @@
     <string name="blank_age_empty">Пожалуйста, введите свой возраст</string>
     <string name="main_settings">Настройки</string>
     <string name="main_refill_blank">Изменить анкету</string>
+
+    <string name="main_title">Помогите защитить наш мир</string>
+    <string name="main_table_environmental_impact">Экологическое воздействие</string>
+    <string name="main_table_second_title">Ваше влияние</string>
+    <string name="main_melted_ice_text">раястаявший лёд</string>
+    <string name="main_melted_ice_for_life_default">200 тонн/жизн</string>
+    <string name="main_melted_ice_per_day">1 тонна/день</string>
+    <string name="main_text_stat">Ваша статистика</string>
+    <string name="add_ice_title">Таящий лёд</string>
+    <string name="add_penguin_title">Пингвины</string>
+
+
 </resources>

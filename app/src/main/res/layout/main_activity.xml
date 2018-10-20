@@ -1,6 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="@string/main_title"
+                    android:textColor="@color/white"
+                    android:textSize="35sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="80dp"
+
+                    />
+
+
+
+
+                <ImageView
+                    android:id="@+id/main_glacier_back"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/main_glacier_back"
+
+                    android:layout_marginTop="330dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/main_table"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+
+                    android:layout_marginTop="420dp"
+                    app:srcCompat="@drawable/main_table"
+
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="550sp"
+                    android:weightSum="1">
+
+
+                    <Button
+                        android:id="@+id/main_ellipse_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+
+
+                        android:onClick="startAddIce"
+
+                        android:layout_weight="0.5"
+                        android:background="@drawable/main_ellipse"
+                        android:text="melted ice"
+
+                        />
+
+                    <Button
+                        android:id="@+id/main_ellipse_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+
+                        android:onClick="startAddPenguin"
+
+                        android:layout_weight="0.5"
+                        android:background="@drawable/main_ellipse"
+                        android:text="penguins"
+                        />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/main_table_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/main_table_environmental_impact"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="435dp"
+                    />
+
+                <TextView
+                    android:id="@+id/main_table_second_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/main_table_second_title"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginTop="725dp"
+                    />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/main_melted_ice_text"
+                    android:textColor="@color/primaryText"
+                    android:textSize="25sp"
+
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="765dp"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/main_melted_for_life"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/main_melted_ice_for_life_default"
+                    android:textColor="@color/primaryText"
+                    android:textSize="25sp"
+
+
+                    android:layout_marginLeft="95dp"
+                    android:layout_marginTop="825dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/main_melted_ice_per_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/main_melted_ice_per_day"
+                    android:textColor="@color/primaryText"
+                    android:textSize="25sp"
+                    android:background="@drawable/main_ice_melted_per_day"
+
+                    android:gravity="center"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:layout_marginTop="935dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/main_text_stat"
+                    android:textColor="@color/primaryText"
+                    android:textSize="25dp"
+
+                    android:gravity="center"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:layout_marginTop="1040dp"
+
+
+                    />
+
+
+
+                <ImageView
+                    android:id="@+id/main_glacier_front"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="250dp"
+                    android:adjustViewBounds="true"
+
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/main_glacier_front" />
+
+
+                <ImageView
+                    android:id="@+id/main_penguin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:adjustViewBounds="true"
+
+                    android:layout_marginTop="130dp"
+                    app:srcCompat="@drawable/main_penguin" />
+
+                <ImageView
+                    android:id="@+id/main_statistics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:adjustViewBounds="true"
+
+                    android:layout_marginTop="130dp"
+                    app:srcCompat="@drawable/main_penguin" />
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

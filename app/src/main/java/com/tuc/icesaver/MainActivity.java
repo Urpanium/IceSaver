@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import java.io.File;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
         Settings.isFirstRun = false;
+
+
     }
 
     @Override
@@ -36,5 +39,17 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BlankActivity.class);
         startActivity(intent);
         finish();
+    }
+
+
+
+    public void startAddIce(View v){
+        Intent intent = new Intent(this, AddIce.class);
+        startActivity(intent);
+    }
+
+    public void startAddPenguin(View v){
+        Intent intent = new Intent(this, AddPenguin.class);
+        startActivity(intent);
     }
 }
