@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     TextView iceMeltPerDayText;
     TextView iceMeltPerLifeText;
 
+    TextView penguinsPerDayText;
+    TextView penguinsDiedText;
+
     final double iceMeltPerDayStandart = 62.230919765;//kg
     final double iceMeltPerDayAll = iceMeltPerDayStandart * 7000000;
     final long penguinsPerDay = 650;
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
             Settings.pengiunsDied = 325 * Settings.age * 365;
             Settings.lastTime = (new Date()).getTime();
+            //setNotificationSchedule();
             Debug.d(null, "First run: " + Settings.lastIceMelt1 + " lastTime: " + Settings.lastTime);
         }
 
@@ -117,15 +121,17 @@ public class MainActivity extends AppCompatActivity {
 
         updateInfluence();
 
+        //penguinsPerDayText.setText();
+
         double outputIceValue = new BigDecimal(iceMeltPerDay1).setScale(1, RoundingMode.HALF_UP).doubleValue();
-        iceMeltPerDayText.setText(outputIceValue + " " + getResources().getString(R.string.main_ice_melt_per_day));
+        iceMeltPerDayText.setText(outputIceValue+"");
 
         double outputIceAllValue = new BigDecimal(Settings.lastIceMeltAll).setScale(1, RoundingMode.HALF_UP).doubleValue();
-        iceMeltPerLifeText.setText(outputIceAllValue + " " + getResources().getString(R.string.main_ice_melt_per_life));
+        iceMeltPerLifeText.setText(outputIceAllValue+"");
         Settings.save();
     }
 
-    void setNotificationSchedule() {
+    /*void setNotificationSchedule() {
         int previous = 0;
         String[] tips = getResources().getStringArray(R.array.tips);
         for (int i = 0; i < 365; i++) {
@@ -135,7 +141,8 @@ public class MainActivity extends AppCompatActivity {
                             .setSmallIcon(R.mipmap.ic_launcher)
                             .setContentText(getResources().getString(R.string.notification_title))
                             .setContentText("Notification text")
-                            .setAutoCancel(true);
+                            .setAutoCancel(true)
+                            .setWhen(Settings.lastTime + i * 1000);
 
             Intent intent = new Intent(this, MainActivity.class);
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
@@ -145,9 +152,10 @@ public class MainActivity extends AppCompatActivity {
             NotificationManager notificationManager =
                     (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
             notificationManager.notify(1, notification);
+
         }
 
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -165,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
     void findWidgets() {
         iceMeltPerDayText = findViewById(R.id.main_melted_ice_per_day);
         iceMeltPerLifeText = findViewById(R.id.main_melted_for_life);
+        penguinsDiedText = findViewById(R.id.main_penguins_per_life);
+        penguinsPerDayText = findViewById(R.id.main_penguins_per_day);
     }
 
     void onBlankChange() {
