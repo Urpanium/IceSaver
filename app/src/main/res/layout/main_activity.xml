@@ -290,22 +290,6 @@
                 </LinearLayout>
 
 
-
-                <TextView
-                    android:id="@+id/main_ice"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginTop="965dp"
-
-                    android:text="BLABLA"
-                    android:textColor="@color/primaryText"
-                    android:textSize="20sp"
-                    android:fontFamily="@font/sofia_light"
-                    android:gravity="center"
-                    />
-
-
                 <ImageView
                     android:id="@+id/main_glacier_front"
                     android:layout_width="fill_parent"

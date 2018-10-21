@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         penguinsPerDayText.setText(penguinsPerDay + "");
         penguinsDiedText.setText(Settings.pengiunsDied + "");
 
-        iceMeltPerLifeText.setText(Settings.lastIceMeltAll + " bln / life");
+        //iceMeltPerLifeText.setText(Settings.lastIceMeltAll + " bln / life");
         double outputIceValue = new BigDecimal(iceMeltPerDay1).setScale(1, RoundingMode.HALF_UP).doubleValue();
         iceMeltPerDayText.setText(outputIceValue + "");
 
@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
         iceMeltPerLifeText = findViewById(R.id.main_melted_for_life);
         penguinsDiedText = findViewById(R.id.main_penguins_per_life);
         penguinsPerDayText = findViewById(R.id.main_penguins_per_day);
-        iceMeltPerLifeAll = findViewById(R.id.main_ice);
+        //iceMeltPerLifeAll = findViewById(R.id.main_ice);
     }
 
     void onBlankChange() {
