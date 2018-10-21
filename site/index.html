@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>IceApp - we work for the future!</title>
+
+    <meta name="Keywords" content="">
+  	<meta name="description" content="">
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" media="all" href="css/animateleft.css">
+  	<link rel="stylesheet" media="all" href="css/animateshake.css">
+  	<link rel="stylesheet" media="all" href="css/bounceinright.css">
+    <link rel="stylesheet" media="all" href="css/zoominup.css">
+
+    <!--подключаемт animateit.css-->
+
+    		<script src="js/wow.min.js"></script>
+    		<script>new WOW().init();</script>
+
+    	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+     <!-- Плавный скролл -->
+    		<script type="text/javascript">
+     $(document).ready(function(){
+        $("#menu").on("click","a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1500);
+        });
+    });
+    </script>
+    <!-- -->
+
+  </head>
+  <body>
+    <div id="bg_bubble"></div>
+    <nav>
+      <img class="bounceInRight animated" id="logo" src="photo/logo.png" alt="logo">
+      <ul id="menu" class="navbar bounceInRight animated">
+        <a href="#aim"><li id="contacts">aim</li></a>
+        <a href="#1"><li id="problems">problems</li></a>
+        <a href="#design_app"><li id="our solution">our solution</li></a>
+        <a href="#concl"><li id="conclusion">conclusion</li></a>
+        <a href="photo/logo.png" download=""><li  id="download">DOWNLOAD APP</li></a>
+      </ul>
+    </nav>
+    <header>
+      <h1 id="main_words" class="zoomInUp wow">IceSaver - we work for the future</h1>
+      <div class="shake animated" id="pinguin_image"></div>
+    </header>
+
+    <div  id="aim" class="aim">
+      <h2 class="bounceInRight wow">THE AIM IS</h2>
+        <h3 class="bounceInLeft wow">To make people think of the harm they cause to the nature and clearly demonstrate what influence our everyday life has on the environment.
+          </h3>
+    </div>
+
+  <div id="1" class="slide_3">
+    <div class="zoomInUp wow" id="images"></div>
+    <div class="bounceInRight wow" id="circle"></div>
+    <h4 class="bounceInRight wow">The study found that about 25 per cent of the global loss of glacier ice that occurred between 1851 and 2010 could be attributable to human influences, but that this rose to about 69 per cent between 1991 and 2010. And we have no grantees that this number won’t continue to increase.</h4>
+  </div>
+
+<div class="slide_4">
+  <div class="zoomInUp wow" id="photo_4"></div>
+  <h5 class="bounceInLeft wow">As a result of melting ice, the penguin population is declining. One of the most common penguin species in the Antarctic, Adelie, is facing the extinction. Last year, only one calf survived in one of the 40-thousand animal populations - caused by climate change and human actions.</h5>
+</div>
+
+<div class="background_2"></div>
+
+  <div class="about_app">
+    <h5 class="zoomInUp wow">Our solution<br/>is our app</h5>
+    <div class="top">
+      <div class="top-1">
+    <img class="zoomInUp wow" id="design_app" src="photo/app_design.png" alt="App's screenshots"/>
+    <div class="right_oval_text">
+    <img class="zoomInUp wow" id="oval_1" src="photo/First_oval.png" alt="oval">
+    <p class="zoomInUp wow">After installing the application the user will be asked to fill the simple questionnaire</p>
+  </div>
+</div>
+<h6 class="bounceInRight wow"id="shows2">IT SHOWS</h6>
+<div class="shows">
+    <p class="circle_1 zoomInUp wow">How much ice melted over the period of the user's life?
+</p>
+    <p class="circle_2 zoomInUp wow">Considers how much ice melts per day due to the user's livelihoods.
+</p>
+    <p class="circle_3 zoomInUp wow">How strongly the Adelie penguin population has declined due to human activity.
+</p>
+    <p class="circle_4 zoomInUp wow">How many penguins die over the entire life of the user?
+    </p>
+  </div>
+  <div class="down_oval_text">
+  <img class="zoomInUp wow" id="oval_2" src="photo/second_oval.png" alt="oval">
+  <p class="bounceInLeft">You can read some information about global problems</p>
+</div>
+
+    <div class="graph">
+      <img id="graphic" class="zoomInUp wow" src="photo/graph.png" alt="graph"/>
+        <div class="oval_and_text">
+            <img id="oval_3" class="zoomInUp wow" src="photo/third_oval.png" alt="oval">
+            <p class="bounceInRight" id="about_graph">You can see your trends on this graph
+      in the app</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="help">
+  <img class="zoomInUp wow" src="photo/advices.png" alt="advices" id="screenshot_advice">
+      <p class="text_5 bounceInLeft">Our app will give you a'lot of advices how to help our planet.</p>
+</div>
+
+<div class="about_calcul">
+  <h6 class="bounceInRight">The app independetly calculates and demonstrates how you influenced the earth’s cryosphere</h6>
+  <img class="zoomInUp wow" src="photo/stats_screen.png" alt="" id="stats_screen">
+</div>
+
+<h6 class="zoomInUp wow" id="develop">What is important that in future, our program can be improved and developed. For example it can be connected to smart clock or fitness bracelets.</h6>
+
+<div id="concl" class="penguin zoomInUp wow">
+  <div class="last_penguin"></div>
+  <div class="circle_33"></div>
+  <div class="circle_22"></div>
+  <div class="circle_11">
+    <h6 class="zoomInUp wow">We live in the world, where all forms of life are closely interrelated. Our influence on the nature mostly harmful, but we are a part of the nature too, and we shouldn’t forget about it! To stop the planet from getting substantially warmer, we need breakthroughs in how we make things, grow food, and move people and goods—not just how we power our homes and cars. In case we don't think about the future, we won't have it. That’s why we work for the future</h6>
+  </div>
+</div>
+
+<footer id="contacts">
+  <a id="download_footer" download="" class="bounceInLeft wow" href="photo/logo.png">DOWNLOAD ICESAVER</a>
+</footer>
+
+  </body>
+</html>
