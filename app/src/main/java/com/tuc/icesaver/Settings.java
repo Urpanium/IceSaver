@@ -26,6 +26,7 @@ class Settings {
         FileUtil.writeKey("iceAll", "" + lastIceMeltAll, ctx);
         FileUtil.writeKey("lastTime", "" + lastTime, ctx);
         FileUtil.writeKey("penguins", "" + pengiunsDied, ctx);
+        FileUtil.writeKey("iceMelt",""+lastIceMelt1,ctx);
     }
 
     static void load() {
@@ -38,6 +39,7 @@ class Settings {
         lastIceMeltAll = Double.parseDouble(FileUtil.readKey("iceAll"));
         lastTime = Long.parseLong(FileUtil.readKey("lastTime"));
         pengiunsDied = Long.parseLong(FileUtil.readKey("penguins"));
+        lastIceMelt1 = Double.parseDouble(FileUtil.readKey("iceMelt"));
     }
 
 }

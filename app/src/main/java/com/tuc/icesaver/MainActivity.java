@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         double outputIceValue = new BigDecimal(iceMeltPerDay1).setScale(1, RoundingMode.HALF_UP).doubleValue();
         iceMeltPerDayText.setText(outputIceValue + "");
 
-        double outputIceAllValue = new BigDecimal(Settings.lastIceMelt1).setScale(1, RoundingMode.HALF_UP).doubleValue();
+        double outputIceAllValue = new BigDecimal(Settings.lastIceMelt1/1000).setScale(1, RoundingMode.HALF_UP).doubleValue();
         iceMeltPerLifeText.setText(outputIceAllValue + "");
         Settings.save();
     }

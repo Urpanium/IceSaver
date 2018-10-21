@@ -72,40 +72,43 @@
 
                     <Button
                         android:id="@+id/main_ellipse_left"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:padding="30dp"
+                        android:layout_marginLeft="15dp"
 
+                        android:layout_marginRight="15dp"
                         android:layout_weight="0.5"
+
                         android:adjustViewBounds="true"
 
                         android:background="@drawable/fields_white"
-
-                        android:onClick="startAddIce"
-                        android:scaleType="fitCenter"
                         android:fontFamily="@font/sofia_light"
+                        android:onClick="startAddIce"
+                        android:padding="30dp"
+                        android:scaleType="fitCenter"
                         android:text="melted ice"
-                        android:textSize="25sp"/>
+                        android:textSize="25sp" />
+
                     <Button
                         android:id="@+id/main_ellipse_right"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-
                         android:layout_gravity="center"
+
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
                         android:layout_weight="0.5"
-                        android:padding="30dp"
-                        android:paddingLeft="40dp"
-                        android:paddingRight="40dp"
 
                         android:adjustViewBounds="true"
                         android:background="@drawable/fields_white"
-                        android:onClick="startAddPenguin"
-                        android:scaleType="fitCenter"
                         android:fontFamily="@font/sofia_light"
+                        android:onClick="startAddPenguin"
+                        android:padding="30dp"
+                        android:scaleType="fitCenter"
                         android:text="penguins"
-                        android:textSize="25sp"/>
+                        android:textSize="25sp" />
                 </LinearLayout>
 
 
@@ -119,15 +122,14 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-
                         android:background="#309ED0"
+
                         android:fontFamily="@font/sofia_light"
-                        android:text="@string/main_melted_ice_text"
-                        android:textSize="50sp"
-                        android:textColor="@color/primaryText"
+                        android:gravity="center"
                         android:paddingBottom="5dp"
-                        />
+                        android:text="@string/main_melted_ice_text"
+                        android:textColor="@color/white"
+                        android:textSize="50sp" />
 
                     <FrameLayout
                         android:layout_width="match_parent"
@@ -148,13 +150,13 @@
                                 android:id="@+id/main_melted_ice_per_day"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="65dp"
                                 android:layout_weight="0.4"
-                                android:layout_marginLeft="10dp"
 
                                 android:text=""
-                                android:textSize="25sp"
                                 android:textColor="@color/primaryText"
-                                />
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -181,11 +183,12 @@
                                 android:id="@+id/main_melted_for_life"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="65dp"
                                 android:layout_weight="0.4"
-                                android:layout_marginLeft="10dp"
                                 android:text="BLABLA"
+                                android:textColor="@color/primaryText"
                                 android:textSize="25sp"
-                                android:textColor="@color/primaryText" />
+                                android:textStyle="bold" />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -211,15 +214,14 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-
                         android:background="#309ED0"
+
                         android:fontFamily="@font/sofia_light"
-                        android:text="@string/main_died_penguins"
-                        android:textSize="50sp"
-                        android:textColor="@color/primaryText"
+                        android:gravity="center"
                         android:paddingBottom="5dp"
-                        />
+                        android:text="@string/main_died_penguins"
+                        android:textColor="@color/white"
+                        android:textSize="50sp" />
 
                     <FrameLayout
                         android:layout_width="match_parent"
@@ -239,11 +241,12 @@
                                 android:id="@+id/main_penguins_per_day"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="65dp"
                                 android:layout_weight="0.4"
-                                android:layout_marginLeft="10dp"
                                 android:text=""
+                                android:textColor="@color/primaryText"
                                 android:textSize="25sp"
-                                android:textColor="@color/primaryText" />
+                                android:textStyle="bold" />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -268,11 +271,12 @@
                                 android:id="@+id/main_penguins_per_life"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="65dp"
                                 android:layout_weight="0.4"
-                                android:layout_marginLeft="10dp"
                                 android:text=""
+                                android:textColor="@color/primaryText"
                                 android:textSize="25sp"
-                                android:textColor="@color/primaryText" />
+                                android:textStyle="bold" />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -290,7 +294,6 @@
                 </LinearLayout>
 
 
-
                 <TextView
                     android:id="@+id/main_ice"
                     android:layout_width="match_parent"
@@ -298,12 +301,11 @@
 
                     android:layout_marginTop="965dp"
 
-                    android:text="BLABLA"
-                    android:textColor="@color/primaryText"
-                    android:textSize="20sp"
                     android:fontFamily="@font/sofia_light"
                     android:gravity="center"
-                    />
+                    android:text="BLABLA"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
 
 
                 <ImageView
