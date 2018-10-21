@@ -135,31 +135,6 @@ public class MainActivity extends AppCompatActivity {
         Settings.save();
     }
 
-    /*void setNotificationSchedule() {
-        int previous = 0;
-        String[] tips = getResources().getStringArray(R.array.tips);
-        for (int i = 0; i < 365; i++) {
-            previous += (Math.random() * tips.length) % tips.length;
-            NotificationCompat.Builder builder =
-                    new NotificationCompat.Builder(this)
-                            .setSmallIcon(R.mipmap.ic_launcher)
-                            .setContentText(getResources().getString(R.string.notification_title))
-                            .setContentText("Notification text")
-                            .setAutoCancel(true)
-                            .setWhen(Settings.lastTime + i * 1000);
-
-            Intent intent = new Intent(this, MainActivity.class);
-            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
-                    PendingIntent.FLAG_UPDATE_CURRENT);
-            builder.setContentIntent(pendingIntent);
-            Notification notification = builder.build();
-            NotificationManager notificationManager =
-                    (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-            notificationManager.notify(1, notification);
-
-        }
-
-    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -179,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
         iceMeltPerLifeText = findViewById(R.id.main_melted_for_life);
         penguinsDiedText = findViewById(R.id.main_penguins_per_life);
         penguinsPerDayText = findViewById(R.id.main_penguins_per_day);
-        //iceMeltPerLifeAll = findViewById(R.id.main_ice);
+        iceMeltPerLifeAll = findViewById(R.id.main_ice);
     }
 
     void onBlankChange() {
