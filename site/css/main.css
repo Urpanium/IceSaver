@@ -448,7 +448,8 @@ p.text_5 {
 }
 
 #stats_screen {
-  width: 30vw;
+  width: 22vw;
+  box-shadow: 1vw 1vw 3vw rgba(0, 0, 0, .2);
 }
 
 .about_calcul h6 {
