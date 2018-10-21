@@ -24,10 +24,18 @@
     <string name="main_refill_blank">Change blank</string>
 
     <string name="main_title">Help to protect our world</string>
-    <string name="main_table_environmental_impact">Environmental impact</string>
+    <string name="main_table_environmental_impact">ENVIRONMENT IMPACT</string>
     <string name="main_table_title_on_black">Your effects</string>
     <string name="main_melted_ice_text">melted ice</string>
+    <string name="main_died_penguins">penguins died</string>
     <string name="main_text_stat">your statistics</string>
+
+    <string name="main_tonn_life">tonn/life</string>
+    <string name="main_tonn_day">tonn/day</string>
+
+    <string name="main_p_day">p/day</string>
+    <string name="main_p_life">p/life</string>
+
 
     <string name="add_ice_title">mellting ice</string>
     <string name="add_penguin_title">penguins</string>

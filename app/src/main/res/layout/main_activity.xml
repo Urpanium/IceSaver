@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient">
@@ -9,17 +10,19 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="0dp">
 
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
-
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -27,6 +30,7 @@
                     android:layout_marginLeft="80dp"
                     android:layout_marginTop="20dp"
                     android:text="@string/main_title"
+                    android:fontFamily="@font/sofia_light"
                     android:textColor="@color/white"
                     android:textSize="35sp" />
 
@@ -41,163 +45,302 @@
                     app:srcCompat="@drawable/main_glacier_back" />
 
 
-                <TextView
-                    android:id="@+id/main_melted_for_life"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginTop="870dp"
-                    android:layout_marginLeft="70dp"
-                    android:layout_marginRight="70dp"
-
-                    android:gravity="center"
-                    android:textSize="35sp"
-                    android:textColor="@color/white"
-                    android:text=""
-
-                    android:background="@drawable/main_table_up"
-
-                    />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="470dp"
-                    android:weightSum="1.5">
-
-                    <ImageView
-                        android:id="@+id/main_table_left_line"
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-
-                        android:layout_marginLeft="35dp"
-                        app:srcCompat="@drawable/main_table_left_line"
-                        />
-
-                    <ImageView
-                        android:id="@+id/main_table_central_line"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:layout_weight="0.5"
-                        app:srcCompat="@drawable/main_table_central_line" />
-
-                    <ImageView
-                        android:id="@+id/main_table_right_line"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-
-                        android:layout_marginRight="35dp"
-                        app:srcCompat="@drawable/main_table_right_line" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginTop="760dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-
-                    android:textColor="@color/white"
-                    android:textSize="30sp"
-                    android:text="@string/main_table_title_on_black"
-
-                    android:gravity="center"
-                    android:background="@drawable/main_table_text_on_black"
-                    />
-
-
-                <TextView
+                <ImageView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="430dp"
-                    android:paddingBottom="10dp"
-                    android:text="@string/main_table_environmental_impact"
-                    android:textColor="@color/white"
-                    android:textSize="35sp"
-                    android:background="@drawable/main_table_up"
-                    android:gravity="center"
+
+                    android:layout_marginTop="480dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/main_title_environment"
+
                     />
+
+
 
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="580sp"
-                    android:orientation="horizontal"
-                    android:weightSum="1.2">
-
+                    android:layout_marginTop="530sp"
+                    android:orientation="vertical"
+                    android:weightSum="1">
 
                     <Button
                         android:id="@+id/main_ellipse_left"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="20dp"
-                        android:scaleType="fitCenter"
-                        android:adjustViewBounds="true"
-                        android:onClick="startAddIce"
+                        android:layout_gravity="center"
+                        android:padding="30dp"
+
                         android:layout_weight="0.5"
-                        android:background="@drawable/main_ellipse"
+                        android:adjustViewBounds="true"
+
+                        android:background="@drawable/fields_white"
+
+                        android:onClick="startAddIce"
+                        android:scaleType="fitCenter"
+                        android:fontFamily="@font/sofia_light"
                         android:text="melted ice"
-                        />
+                        android:textSize="25sp"/>
                     <Button
                         android:id="@+id/main_ellipse_right"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="10dp"
-                        android:scaleType="fitCenter"
-                        android:adjustViewBounds="true"
-                        android:onClick="startAddPenguin"
+                        android:layout_marginTop="10dp"
+
+                        android:layout_gravity="center"
                         android:layout_weight="0.5"
-                        android:background="@drawable/main_ellipse"
+                        android:padding="30dp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/fields_white"
+                        android:onClick="startAddPenguin"
+                        android:scaleType="fitCenter"
+                        android:fontFamily="@font/sofia_light"
                         android:text="penguins"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="750dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:gravity="center"
+
+                        android:background="#309ED0"
+                        android:fontFamily="@font/sofia_light"
+                        android:text="@string/main_melted_ice_text"
+                        android:textSize="50sp"
+                        android:textColor="@color/primaryText"
                         />
 
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            android:background="@drawable/main_text_background_green_second"
+                            android:layout_marginTop="35dp">
+
+                            <TextView
+                                android:id="@+id/main_melted_ice_per_day"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+
+
+                                android:text=""
+                                android:textSize="25sp"
+                                android:textColor="@color/primaryText"
+                                android:gravity="center"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+
+
+                                android:fontFamily="@font/sofia_light"
+                                android:text="@string/main_tonn_day"
+                                android:textSize="25sp"
+                                android:textColor="@color/white"
+
+                                android:gravity="center"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            android:background="@drawable/main_text_background_green">
+
+                            <TextView
+                                android:id="@+id/main_melted_for_life"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+
+                                android:text="BLABLA"
+                                android:textSize="25sp"
+                                android:textColor="@color/primaryText"
+
+                                android:gravity="center"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+
+                                android:fontFamily="@font/sofia_light"
+                                android:text="@string/main_tonn_life"
+                                android:textSize="25sp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                />
+                        </LinearLayout>
+
+                    </FrameLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1050dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+
+                        android:background="#309ED0"
+                        android:fontFamily="@font/sofia_light"
+                        android:text="@string/main_died_penguins"
+                        android:textSize="50sp"
+                        android:textColor="@color/primaryText"
+                        />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            android:background="@drawable/main_text_background_green_second"
+                            android:layout_marginTop="35dp">
+
+                            <TextView
+                                android:id="@+id/main_penguins_per_day"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:layout_marginTop="50dp"
+
+                                android:text=""
+                                android:textSize="25sp"
+                                android:textColor="@color/primaryText"
+                                android:gravity="center"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:layout_marginTop="50dp"
+
+                                android:text="@string/main_p_day"
+                                android:textSize="25sp"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/sofia_light"
+
+                                android:gravity="center"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            android:background="@drawable/main_text_background_green">
+
+                            <TextView
+                                android:id="@+id/main_penguins_per_life"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+
+                                android:text="BLABLA"
+                                android:textSize="25sp"
+                                android:textColor="@color/primaryText"
+
+                                android:gravity="center"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+
+                                android:text="@string/main_p_life"
+                                android:textSize="25sp"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/sofia_light"
+                                android:gravity="center"
+                                />
+
+                        </LinearLayout>
+
+                    </FrameLayout>
 
                 </LinearLayout>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <TextView
-                    android:id="@+id/main_melted_ice_per_day"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginLeft="45dp"
-                    android:layout_marginTop="1035dp"
-                    android:layout_marginRight="45dp"
-                    android:background="@drawable/main_table_up"
-
-
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="@color/primaryText"
-                    android:textSize="25sp"
-
-                    />
-
-                <TextView
+                    android:id="@+id/main_ice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    android:layout_marginLeft="45dp"
-                    android:layout_marginTop="1110dp"
-                    android:layout_marginRight="45dp"
+                    android:layout_marginTop="965dp"
 
-                    android:gravity="center"
-                    android:text="@string/main_text_stat"
+                    android:text="BLABLA"
                     android:textColor="@color/primaryText"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:fontFamily="@font/sofia_light"
+                    android:gravity="center"
+                    />
 
 
                 <ImageView
