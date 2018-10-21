@@ -119,8 +119,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
-
                         android:gravity="center"
 
                         android:background="#309ED0"
@@ -128,6 +126,7 @@
                         android:text="@string/main_melted_ice_text"
                         android:textSize="50sp"
                         android:textColor="@color/primaryText"
+                        android:paddingBottom="5dp"
                         />
 
                     <FrameLayout
@@ -142,14 +141,15 @@
                             android:weightSum="1"
                             android:background="@drawable/main_text_background_green_second"
                             android:layout_marginTop="35dp"
-                            android:gravity="center">
+                            android:gravity="center"
+                            >
 
                             <TextView
                                 android:id="@+id/main_melted_ice_per_day"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.4"
-
+                                android:layout_marginLeft="10dp"
 
                                 android:text=""
                                 android:textSize="25sp"
@@ -174,21 +174,18 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:weightSum="1"
-                            android:background="@drawable/main_text_background_green">
+                            android:background="@drawable/main_text_background_green"
+                            android:gravity="center">
 
                             <TextView
                                 android:id="@+id/main_melted_for_life"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.4"
-
+                                android:layout_marginLeft="10dp"
                                 android:text="BLABLA"
                                 android:textSize="25sp"
-                                android:textColor="@color/primaryText"
-
-                                android:gravity="center"
-                                />
-
+                                android:textColor="@color/primaryText" />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -197,9 +194,7 @@
                                 android:fontFamily="@font/sofia_light"
                                 android:text="@string/main_tonn_life"
                                 android:textSize="25sp"
-                                android:textColor="@color/white"
-                                android:gravity="center"
-                                />
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
                     </FrameLayout>
@@ -223,6 +218,7 @@
                         android:text="@string/main_died_penguins"
                         android:textSize="50sp"
                         android:textColor="@color/primaryText"
+                        android:paddingBottom="5dp"
                         />
 
                     <FrameLayout
@@ -236,34 +232,27 @@
                             android:orientation="horizontal"
                             android:weightSum="1"
                             android:background="@drawable/main_text_background_green_second"
-                            android:layout_marginTop="35dp">
+                            android:layout_marginTop="35dp"
+                            android:gravity="center">
 
                             <TextView
                                 android:id="@+id/main_penguins_per_day"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.4"
-                                android:layout_marginTop="50dp"
-
+                                android:layout_marginLeft="10dp"
                                 android:text=""
                                 android:textSize="25sp"
-                                android:textColor="@color/primaryText"
-                                android:gravity="center"
-                                />
-
+                                android:textColor="@color/primaryText" />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.6"
-                                android:layout_marginTop="50dp"
 
                                 android:text="@string/main_p_day"
                                 android:textSize="25sp"
                                 android:textColor="@color/white"
-                                android:fontFamily="@font/sofia_light"
-
-                                android:gravity="center"
-                                />
+                                android:fontFamily="@font/sofia_light" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -271,20 +260,19 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:weightSum="1"
-                            android:background="@drawable/main_text_background_green">
+                            android:background="@drawable/main_text_background_green"
+                            android:gravity="center"
+                            android:paddingBottom="5dp">
 
                             <TextView
                                 android:id="@+id/main_penguins_per_life"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.4"
-
-                                android:text="BLABLA"
+                                android:layout_marginLeft="10dp"
+                                android:text=""
                                 android:textSize="25sp"
-                                android:textColor="@color/primaryText"
-
-                                android:gravity="center"
-                                />
+                                android:textColor="@color/primaryText" />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -293,36 +281,13 @@
                                 android:text="@string/main_p_life"
                                 android:textSize="25sp"
                                 android:textColor="@color/white"
-                                android:fontFamily="@font/sofia_light"
-                                android:gravity="center"
-                                />
+                                android:fontFamily="@font/sofia_light" />
 
                         </LinearLayout>
 
                     </FrameLayout>
 
                 </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
