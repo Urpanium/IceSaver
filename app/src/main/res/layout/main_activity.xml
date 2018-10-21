@@ -137,40 +137,30 @@
 
                     <Button
                         android:id="@+id/main_ellipse_left"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-
-                        android:layout_weight="0.4"
-                        android:layout_marginRight="10dp"
-
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
                         android:onClick="startAddIce"
-
+                        android:layout_weight="0.5"
                         android:background="@drawable/main_ellipse"
-                        android:textSize="15sp"
-                        android:textColor="@color/primaryText"
-                        android:text="melted ice" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.4"
+                        android:text="melted ice"
                         />
-
-
                     <Button
                         android:id="@+id/main_ellipse_right"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-
-                        android:layout_weight="0.4"
-                        android:layout_marginLeft="10dp"
-
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
                         android:onClick="startAddPenguin"
-
+                        android:layout_weight="0.5"
                         android:background="@drawable/main_ellipse"
-                        android:textSize="15sp"
-                        android:textColor="@color/primaryText"
-                        android:text="penguins" />
+                        android:text="penguins"
+                        />
 
 
 

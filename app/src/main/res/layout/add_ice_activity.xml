@@ -14,31 +14,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-
-                    android:onClick="backToMain"
-                    android:background="@drawable/add_back_button"
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-
-                    android:text="@string/add_ice_title"
-                    android:textColor="@color/white"
-                    android:textSize="35sp"
-
-                    android:gravity="center"
-                    android:background="@drawable/add_title_background"
-                    />
-            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
