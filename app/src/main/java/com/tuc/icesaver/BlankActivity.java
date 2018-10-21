@@ -18,7 +18,6 @@ import android.widget.Toast;
 public class BlankActivity extends AppCompatActivity {
 
     Switch carAvailibilitySwitch;
-    //Switch smokingSwitch;
     Switch beefSwitch;
     Switch milkSwitch;
     Spinner beefFrequencySpinner;
