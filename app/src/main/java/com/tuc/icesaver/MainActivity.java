@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     TextView penguinsPerDayText;
     TextView penguinsDiedText;
 
+    TextView iceMeltPerLifeAll;
+
     final double iceMeltPerDayStandart = 62.230919765;//kg
     final double iceMeltPerDayAll = iceMeltPerDayStandart * 7000000;
     final long penguinsPerDay = 650;
@@ -121,13 +123,15 @@ public class MainActivity extends AppCompatActivity {
 
         updateInfluence();
 
-        //penguinsPerDayText.setText();
+        penguinsPerDayText.setText(penguinsPerDay + "");
+        penguinsDiedText.setText(Settings.pengiunsDied + "");
 
+        iceMeltPerLifeText.setText(Settings.lastIceMeltAll + " bln / life");
         double outputIceValue = new BigDecimal(iceMeltPerDay1).setScale(1, RoundingMode.HALF_UP).doubleValue();
-        iceMeltPerDayText.setText(outputIceValue+"");
+        iceMeltPerDayText.setText(outputIceValue + "");
 
-        double outputIceAllValue = new BigDecimal(Settings.lastIceMeltAll).setScale(1, RoundingMode.HALF_UP).doubleValue();
-        iceMeltPerLifeText.setText(outputIceAllValue+"");
+        double outputIceAllValue = new BigDecimal(Settings.lastIceMelt1).setScale(1, RoundingMode.HALF_UP).doubleValue();
+        iceMeltPerLifeText.setText(outputIceAllValue + "");
         Settings.save();
     }
 
@@ -175,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
         iceMeltPerLifeText = findViewById(R.id.main_melted_for_life);
         penguinsDiedText = findViewById(R.id.main_penguins_per_life);
         penguinsPerDayText = findViewById(R.id.main_penguins_per_day);
+        iceMeltPerLifeAll = findViewById(R.id.main_ice);
     }
 
     void onBlankChange() {
