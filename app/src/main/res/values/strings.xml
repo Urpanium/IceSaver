@@ -41,7 +41,7 @@
     <string name="add_ice_title">mellting ice</string>
     <string name="add_penguin_title">penguins</string>
     <string name="main_ice_melt_per_day">kg / day</string>
-    <string name="main_ice_melt_per_life">bln tonns / life</string>
+    <string name="main_ice_melt_per_life">bln tonn / life</string>
     <string-array name="tips">
         <item>Switch your computer to standby every time you stop working on it: during lunch break and other urgent matters.</item>
         <item>Turn off the office computer at night and before the weekend.</item>

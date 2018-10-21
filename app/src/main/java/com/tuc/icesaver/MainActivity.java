@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     TextView penguinsPerDayText;
     TextView penguinsDiedText;
 
-    TextView iceMeltPerLifeAll;
+    TextView iceMeltPerLifeAllText;
 
     final double iceMeltPerDayStandart = 62.230919765;//kg
     final double iceMeltPerDayAll = iceMeltPerDayStandart * 7000000;
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         penguinsPerDayText.setText(penguinsPerDay + "");
         penguinsDiedText.setText(Settings.pengiunsDied + "");
 
-        //iceMeltPerLifeText.setText(Settings.lastIceMeltAll + " bln / life");
+        iceMeltPerLifeAllText.setText(Settings.lastIceMeltAll + " bln tonn / life");
         double outputIceValue = new BigDecimal(iceMeltPerDay1).setScale(1, RoundingMode.HALF_UP).doubleValue();
         iceMeltPerDayText.setText(outputIceValue + "");
 
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
         iceMeltPerLifeText = findViewById(R.id.main_melted_for_life);
         penguinsDiedText = findViewById(R.id.main_penguins_per_life);
         penguinsPerDayText = findViewById(R.id.main_penguins_per_day);
-        //iceMeltPerLifeAll = findViewById(R.id.main_ice); GOVNO
+        iceMeltPerLifeAllText = findViewById(R.id.main_ice);
     }
 
     void onBlankChange() {

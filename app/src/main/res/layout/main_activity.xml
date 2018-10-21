@@ -27,12 +27,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="80dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"
-                    android:fontFamily="@font/sofia_light"
-                    android:gravity="center"
                     android:text="@string/main_title"
+                    android:fontFamily="@font/sofia_light"
                     android:textColor="@color/white"
                     android:textSize="35sp" />
 
@@ -290,6 +288,22 @@
                     </FrameLayout>
 
                 </LinearLayout>
+
+
+
+                <TextView
+                    android:id="@+id/main_ice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="965dp"
+
+                    android:text="BLABLA"
+                    android:textColor="@color/primaryText"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/sofia_light"
+                    android:gravity="center"
+                    />
 
 
                 <ImageView
