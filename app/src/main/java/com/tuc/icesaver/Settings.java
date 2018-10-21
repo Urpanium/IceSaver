@@ -7,7 +7,9 @@ class Settings {
     static boolean isFirstRun = false;
     static Context ctx;
     static long lastTime = 0;
-    static double lastIceMeltAllValue = 0;
+    static long pengiunsDied = 0;
+    static double lastIceMelt1 = 0;
+    static double lastIceMeltAll = 0;
     static int age = 0;
     static boolean car = false;
     static boolean beef = false;
@@ -21,7 +23,9 @@ class Settings {
         if (beef)
             FileUtil.writeKey("beefFrequency", "" + beefFrequency, ctx);
         FileUtil.writeKey("milk", "" + milk, ctx);
-
+        FileUtil.writeKey("iceAll", "" + lastIceMeltAll, ctx);
+        FileUtil.writeKey("lastTime", "" + lastTime, ctx);
+        FileUtil.writeKey("penguins", "" + pengiunsDied, ctx);
     }
 
     static void load() {
@@ -31,7 +35,9 @@ class Settings {
         if (beef)
             beefFrequency = Integer.parseInt(FileUtil.readKey("beefFrequency"));
         milk = Boolean.parseBoolean(FileUtil.readKey("milk"));
-
+        lastIceMeltAll = Double.parseDouble(FileUtil.readKey("iceAll"));
+        lastTime = Long.parseLong(FileUtil.readKey("lastTime"));
+        pengiunsDied = Long.parseLong(FileUtil.readKey("penguins"));
     }
 
 }

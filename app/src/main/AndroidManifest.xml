@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
@@ -25,28 +26,33 @@
 
 
         <activity android:name=".StartActivity"
-            android:theme="@style/AppThemeNoActionBar">
+            android:theme="@style/AppThemeNoActionBar"
+            android:screenOrientation="portrait">
         </activity>
 
 
         <activity
             android:name=".BlankActivity"
-            android:label="@string/blank_title">
+            android:label="@string/blank_title"
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".AddIce"
-            android:theme="@style/AddInformation">
+            android:theme="@style/AddInformation"
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".AddPenguin"
-            android:theme="@style/AddInformation">
+            android:theme="@style/AddInformation"
+            android:screenOrientation="portrait">
         </activity>
 
 
