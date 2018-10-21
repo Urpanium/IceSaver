@@ -1,0 +1,56 @@
+     /*SOFIA SOFIA SOFIA*/
+
+@font-face {
+    font-family: sofia; /* Гарнитура шрифта */
+    src: url(../fonts/Sofia.ttf); /* Путь к файлу со шрифтом */
+   }
+   @font-face {
+       font-family: sofia_bold; /* Гарнитура шрифта */
+       src: url(../fonts/Sofia-Bold.ttf); /* Путь к файлу со шрифтом */
+      }
+      @font-face {
+          font-family: sofia_elight; /* Гарнитура шрифта */
+          src: url(../fonts/Sofia-ExtraLight.ttf); /* Путь к файлу со шрифтом */
+         }
+         @font-face {
+             font-family: sofia_light; /* Гарнитура шрифта */
+             src: url(../fonts/Sofia-Light.ttf); /* Путь к файлу со шрифтом */
+            }
+            @font-face {
+                font-family: sofia_med; /* Гарнитура шрифта */
+                src: url(../fonts/Sofia-Medium.ttf); /* Путь к файлу со шрифтом */
+               }
+               @font-face {
+                   font-family: sofia_thin; /* Гарнитура шрифта */
+                   src: url(../fonts/Sofia-Thin.ttf); /* Путь к файлу со шрифтом */
+                  }
+
+     /*Quicksand Quicksand Quicksand*/
+     @font-face {
+         font-family: qsand_bold; /* Гарнитура шрифта */
+         src: url(../fonts/Quicksand-Bold.ttf); /* Путь к файлу со шрифтом */
+        }
+        @font-face {
+            font-family: qsand_bold_it; /* Гарнитура шрифта */
+            src: url(../fonts/Quicksand-BoldItalic.ttf); /* Путь к файлу со шрифтом */
+           }
+           @font-face {
+               font-family: qsand_dashreg; /* Гарнитура шрифта */
+               src: url(../fonts/QuicksandDash-Regular.ttf); /* Путь к файлу со шрифтом */
+              }
+              @font-face {
+                  font-family: qsand_ital; /* Гарнитура шрифта */
+                  src: url(../fonts/Quicksand-Italic.ttf); /* Путь к файлу со шрифтом */
+                 }
+                 @font-face {
+                     font-family: qsand_light; /* Гарнитура шрифта */
+                     src: url(../fonts/Quicksand-Light.ttf); /* Путь к файлу со шрифтом */
+                    }
+                    @font-face {
+                        font-family: qsand_ital; /* Гарнитура шрифта */
+                        src: url(../fonts/qsand_ital.ttf); /* Путь к файлу со шрифтом */
+                       }
+@font-face {
+font-family: romand; /* Гарнитура шрифта */
+src: url(../fonts/ofont.ru_RomanD.ttf); /* Путь к файлу со шрифтом */
+}
