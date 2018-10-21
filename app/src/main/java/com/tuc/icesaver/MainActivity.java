@@ -12,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -22,8 +24,10 @@ public class MainActivity extends AppCompatActivity {
     TextView iceMeltPerLifeText;
 
     final double iceMeltPerDayStandart = 62.230919765;//kg
+    final double iceMeltPerDayAll = iceMeltPerDayStandart * 7000000;
+    final long penguinsPerDay = 650;
     double iceMeltPerDay1 = iceMeltPerDayStandart;
-    double iceMeltPerDayAll = iceMeltPerDayStandart * 7000000;
+
     int carInfluence = 15;
     int beefInfluence = 0;
     int milkInfluence = 0;
@@ -37,13 +41,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
         findWidgets();
+        Settings.load();
         if (Settings.isFirstRun) {
-            if (Settings.age > 18)
-                Settings.lastIceMeltAllValue = 18 * 159 + (Settings.age - 18) * 53;
-            else
-                Settings.lastIceMeltAllValue = Settings.age * 159;
-
+            if (Settings.age > 18) {
+                Settings.lastIceMeltAll = 18 * 159 + (Settings.age - 18) * 53;
+                Settings.lastIceMelt1 = Settings.lastIceMeltAll / 7 * 1000;
+            } else {
+                Settings.lastIceMeltAll = Settings.age * 159;
+                Settings.lastIceMelt1 = Settings.lastIceMeltAll / 7 * 1000;
+            }
+            Settings.pengiunsDied = 325 * Settings.age * 365;
+            Settings.lastTime = (new Date()).getTime();
+            Debug.d(null, "First run: " + Settings.lastIceMelt1 + " lastTime: " + Settings.lastTime);
         }
+
         Settings.isFirstRun = false;
         startIntervalUpdating();
 
@@ -84,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
         if (!Settings.milk)
             milkInfluence = -10;
         totalInfluence = carInfluence + beefInfluence + milkInfluence;
-        Debug.d(null, "totalInfluence: " + totalInfluence + ", iceMeltPerDayStandart: " + iceMeltPerDayStandart);
         double newIceMeltPerDay = (((100 + totalInfluence) * iceMeltPerDayStandart) / 100);
         iceMeltPerDay1 = newIceMeltPerDay;
     }
@@ -93,12 +103,21 @@ public class MainActivity extends AppCompatActivity {
 
         long timeNow = (new Date()).getTime();
         double missedDays = (timeNow - Settings.lastTime) / 1000 / 60 / 60 / 24;
-        double iceMelted = iceMeltPerDayAll * missedDays;
-        Settings.lastIceMeltAllValue += iceMelted * 7000000;
+        double iceMeltedAll = iceMeltPerDayAll * missedDays / 1000000000;
+        Settings.lastIceMelt1 += iceMeltPerDay1 * missedDays;
+        Settings.pengiunsDied += penguinsPerDay * missedDays;
+        Debug.d(null, "penguins:" + Settings.pengiunsDied);
+        Settings.lastIceMeltAll += iceMeltedAll;
         Settings.lastTime = timeNow;
-        updateInfluence();
-        iceMeltPerDayText.setText(iceMeltPerDay1 + " " + getResources().getString(R.string.main_ice_melt_per_day));
 
+        updateInfluence();
+
+        double outputIceValue = new BigDecimal(iceMeltPerDay1).setScale(1, RoundingMode.HALF_UP).doubleValue();
+        iceMeltPerDayText.setText(outputIceValue + " " + getResources().getString(R.string.main_ice_melt_per_day));
+
+        double outputIceAllValue = new BigDecimal(Settings.lastIceMeltAll).setScale(1, RoundingMode.HALF_UP).doubleValue();
+        iceMeltPerLifeText.setText(outputIceAllValue + " " + getResources().getString(R.string.main_ice_melt_per_life));
+        Settings.save();
     }
 
     @Override

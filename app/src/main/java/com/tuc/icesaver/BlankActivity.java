@@ -46,6 +46,8 @@ public class BlankActivity extends AppCompatActivity {
             beefFrequencySpinner.setSelection(Settings.beefFrequency);
             milkSwitch.setChecked(Settings.milk);
             ageEditText.setText(Settings.age + "", TextView.BufferType.EDITABLE);
+            ageEditText.setEnabled(false);
+            ageEditText.setClickable(false);
         }
     }
 
