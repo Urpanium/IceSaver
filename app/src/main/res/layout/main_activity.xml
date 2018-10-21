@@ -141,7 +141,8 @@
                             android:orientation="horizontal"
                             android:weightSum="1"
                             android:background="@drawable/main_text_background_green_second"
-                            android:layout_marginTop="35dp">
+                            android:layout_marginTop="35dp"
+                            android:gravity="center">
 
                             <TextView
                                 android:id="@+id/main_melted_ice_per_day"
@@ -153,7 +154,6 @@
                                 android:text=""
                                 android:textSize="25sp"
                                 android:textColor="@color/primaryText"
-                                android:gravity="center"
                                 />
 
                             <TextView
@@ -166,8 +166,6 @@
                                 android:text="@string/main_tonn_day"
                                 android:textSize="25sp"
                                 android:textColor="@color/white"
-
-                                android:gravity="center"
                                 />
                         </LinearLayout>
 

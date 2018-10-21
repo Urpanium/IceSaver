@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ice App</string>
+    <string name="app_name">Ice Saver</string>
     <string name="logo">Crutch</string>
     <string name="start_start">Start</string>
     <string name="blank_car">Car availability</string>
@@ -41,6 +41,19 @@
     <string name="add_penguin_title">penguins</string>
     <string name="main_ice_melt_per_day">kg / day</string>
     <string name="main_ice_melt_per_life">bln tonns / life</string>
-
+    <string-array name="tips">
+        <item>Switch your computer to standby every time you stop working on it: during lunch break and other urgent matters.</item>
+        <item>Turn off the office computer at night and before the weekend.</item>
+        <item>Unplug the power cord when you finish working with appliances.</item>
+        <item>Eat less meat.</item>
+        <item>Walk, change to more efficient cars, use bicycles.</item>
+        <item>Travel by train.</item>
+        <item>Suggest to friends to go by one car, but full, instead of two, but half-empty, in your country trips.</item>
+        <item>Consume responsibly. Do not buy more than you need. Do not buy what you do not need.</item>
+        <item>For grocery shopping, use fabric bags.</item>
+        <item>If possible, purchase products in cardboard boxes.</item>
+        <item>Use plastic bags several times.</item>
+    </string-array>
+    <string name="notification_title">Ice Saver Tip</string>
 
 </resources>

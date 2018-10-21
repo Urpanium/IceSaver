@@ -1,9 +1,14 @@
 package com.tuc.icesaver;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -106,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         double iceMeltedAll = iceMeltPerDayAll * missedDays / 1000000000;
         Settings.lastIceMelt1 += iceMeltPerDay1 * missedDays;
         Settings.pengiunsDied += penguinsPerDay * missedDays;
-        Debug.d(null, "penguins:" + Settings.pengiunsDied);
+        //Debug.d(null, "penguins:" + Settings.pengiunsDied);
         Settings.lastIceMeltAll += iceMeltedAll;
         Settings.lastTime = timeNow;
 
@@ -118,6 +123,30 @@ public class MainActivity extends AppCompatActivity {
         double outputIceAllValue = new BigDecimal(Settings.lastIceMeltAll).setScale(1, RoundingMode.HALF_UP).doubleValue();
         iceMeltPerLifeText.setText(outputIceAllValue + " " + getResources().getString(R.string.main_ice_melt_per_life));
         Settings.save();
+    }
+
+    void setNotificationSchedule() {
+        int previous = 0;
+        String[] tips = getResources().getStringArray(R.array.tips);
+        for (int i = 0; i < 365; i++) {
+            previous += (Math.random() * tips.length) % tips.length;
+            NotificationCompat.Builder builder =
+                    new NotificationCompat.Builder(this)
+                            .setSmallIcon(R.mipmap.ic_launcher)
+                            .setContentText(getResources().getString(R.string.notification_title))
+                            .setContentText("Notification text")
+                            .setAutoCancel(true);
+
+            Intent intent = new Intent(this, MainActivity.class);
+            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
+                    PendingIntent.FLAG_UPDATE_CURRENT);
+            builder.setContentIntent(pendingIntent);
+            Notification notification = builder.build();
+            NotificationManager notificationManager =
+                    (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            notificationManager.notify(1, notification);
+        }
+
     }
 
     @Override
@@ -153,7 +182,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AddPenguin.class);
         startActivity(intent);
     }
-
 
 
 }
