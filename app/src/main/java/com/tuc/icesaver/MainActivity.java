@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
         iceMeltPerLifeText = findViewById(R.id.main_melted_for_life);
         penguinsDiedText = findViewById(R.id.main_penguins_per_life);
         penguinsPerDayText = findViewById(R.id.main_penguins_per_day);
-        iceMeltPerLifeAll = findViewById(R.id.main_ice);
+        //iceMeltPerLifeAll = findViewById(R.id.main_ice); GOVNO
     }
 
     void onBlankChange() {

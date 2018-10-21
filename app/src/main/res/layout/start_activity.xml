@@ -14,19 +14,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
 
             <TextView
                 android:id="@+id/tvLogoDown"
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
-
-                android:layout_marginLeft="80sp"
-                android:layout_marginRight="60sp"
                 android:layout_marginTop="20sp"
-
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
                 android:text="@string/logo"
                 android:textColor="@color/white"
                 android:textSize="55sp"
@@ -36,7 +34,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:layout_gravity="center_vertical"
                 android:layout_marginTop="90sp"
                 android:layout_marginBottom="80sp"
 
@@ -49,7 +47,10 @@
                 android:layout_margin="15dp"
                 android:onClick="startBlank"
                 android:text="@string/start_start"
-                android:backgroundTint="@color/accent"/>
+                android:background="@drawable/fields"
+                android:layout_gravity="center_vertical">
+
+            </Button>
 
         </LinearLayout>
 
