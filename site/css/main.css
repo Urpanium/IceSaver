@@ -224,7 +224,7 @@ animation:spin 180s linear infinite;
   margin-top: 20vw;
   background-image: url(../photo/background_material.png);
   width: 100%;
-  height: 320vw;
+  height: 420vw;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
@@ -426,6 +426,7 @@ p.circle_4 {
 #screenshot_advice {
   width: 18%;
   height: 40%;
+  box-shadow: .5vw .5vw 3vw rgba(0,0,0,.1) ;
 }
 
 
@@ -507,7 +508,7 @@ p.text_5 {
 }
 
 .penguin {
-  margin-top: 30vw;
+  margin-top: 10vw;
   margin-left: 30vw;
 }
 
@@ -548,7 +549,7 @@ footer {
   display: flex;
   height: 10vw;
   background-color: #2584a9;
-  margin-top: 83vw;
+  margin-top: 60vw;
 }
 
 #download_footer {
@@ -572,4 +573,77 @@ footer {
   background-color: rgba(255, 255, 255, .1);
   transition: .3s;
   margin-bottom: .5vw;
+}
+
+
+.also {
+	display: flex;
+	margin-top:40vw;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+}
+
+.also h6 {
+	text-align: center;
+	font-size: 2vw;
+	color:white;
+	font-family: sofia_light;
+	width:30vw;
+	margin-top:-40vw;
+	margin-left:-35vw;
+}
+
+#road {
+	width:80%;
+}
+
+.leaderboard {
+	display: flex;
+	margin-top:30vw;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	align-items: center;
+	padding-left:20vw;
+	padding-right: 20vw;
+}
+
+.leaderboard h6 {
+	text-align: center;
+	font-size: 2vw;
+	color:white;
+	font-family: sofia_light;
+	width:30vw;
+}
+
+#lboard {
+	width: 30%;
+}
+
+#h {
+	margin:0;
+	font-family: sofia_bold;
+	color: rgba(0,0,0,.8);
+}
+
+#g {
+	color:black;
+	font-family: sofia_bold;
+	font-size: 1.5vw;
+}
+
+#design {
+	position: absolute;
+	color:white;
+	font-family: sofia_light;
+	font-size: 1.3vw;
+	margin-left:42vw;
+	margin-top: 1vw;
+	border-radius: 3vw;
+	padding: .5vw;
+}
+
+#design:hover {
+		background-color: rgba(255,255,255,.1);
+		transition: .5s;
 }
