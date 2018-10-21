@@ -20,12 +20,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                android:textSize="20sp"
-                android:textColor="@color/primaryText"
-                android:text="VSE OK! ETO ICE"
-
                 android:layout_margin="15dp"
-                />
+                android:text="The study found that about 25 per cent of the global loss of glacier ice that occurred between 1851 and 2010 could be attributable to human influences, but that this rose to about 69 per cent between 1991 and 2010. And we have no grantees that this number won’t continue to increase."
+                android:textColor="@color/primaryText"
+                android:fontFamily="@font/sofia_light"
+                android:textSize="20sp" />
 
         </LinearLayout>
 

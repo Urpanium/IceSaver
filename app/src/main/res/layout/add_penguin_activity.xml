@@ -23,11 +23,11 @@
                 android:layout_height="wrap_content"
 
 
-                android:textSize="20sp"
-                android:textColor="@color/primaryText"
-                android:text="VSE OK! ETO PEN"
-
                 android:layout_margin="15dp"
+                android:text="As a result of melting ice, the penguin population is declining. One of the most common penguin species in the Antarctic, Adelie, is facing the extinction. Last year, only one calf survived in one of the 40-thousand animal populations - caused by climate change and human actions."
+                android:textColor="@color/primaryText"
+                android:fontFamily="@font/sofia_light"
+                android:textSize="20sp"
 
                 />
 
