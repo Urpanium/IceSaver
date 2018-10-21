@@ -34,13 +34,4 @@ public class AddPenguin extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-    /*
-    public void backToMain(View v){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-    */
-
-
 }
